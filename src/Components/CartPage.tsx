@@ -28,7 +28,6 @@ const CartPage = () => {
 
     return total + quantity * price;
   }, 0);
-
   const handleUpdateQuantity = (id: string, newQuantity: number) => {
     if (newQuantity >= 1) {
       updateItemQuantity(id, newQuantity);

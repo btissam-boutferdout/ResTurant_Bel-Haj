@@ -104,14 +104,13 @@ const Confirme = () => {
           Phone Number
         </label>
         <input
-          type="text"
+          type="number"
           id="phone"
           className="form-control"
           placeholder="Enter Your Phone Number (9 digits)"
           value={formData.phone}
           onChange={handleChange}
           aria-label="Enter your phone number"
-          maxLength={9}
           required
         />
       </div>
