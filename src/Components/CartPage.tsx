@@ -15,22 +15,22 @@ const CartPage = () => {
 
   // Calculate total price with safeguards
   const totalPrice = cartItems.reduce((total, item) => {
-    const price = Number(item.discountedPrice);
-    const quantity = Math.max(item.quantity || 1, 0); // Default to 1, prevent negative quantity
+    const price = parseFloat(item.discountedPrice);
+    const quantity = Math.max(item.quantity || 1, 1); // Default to 1, prevent negative or zero
 
     if (isNaN(price)) {
       console.error(
         `Invalid discountedPrice for item ${item.id}:`,
         item.discountedPrice
       );
-      return total; // Skip invalid price and continue
+      return total; // Skip invalid price
     }
 
     return total + quantity * price;
   }, 0);
 
-  const handleUpdateQuantity = (id, newQuantity) => {
-    if (newQuantity >= 0) {
+  const handleUpdateQuantity = (id: string, newQuantity: number) => {
+    if (newQuantity >= 1) {
       updateItemQuantity(id, newQuantity);
     }
   };

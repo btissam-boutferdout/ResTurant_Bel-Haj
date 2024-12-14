@@ -8,22 +8,67 @@ const Confirme = () => {
     phone: "",
     comments: "",
   });
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
   };
 
+  const validateForm = () => {
+    const { name, address, phone } = formData;
+
+    if (!name.trim()) {
+      return "Name is required.";
+    }
+    if (!address.trim()) {
+      return "Address is required.";
+    }
+    if (!phone.trim() || !/^\d{9}$/.test(phone)) {
+      return "Phone number must be 9 digits.";
+    }
+
+    return "";
+  };
+
   const handleConfirm = () => {
+    const validationError = validateForm();
+
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+
+    // Handle form submission
     console.log(
       `Data Submitted:\nName: ${formData.name}\nAddress: ${formData.address}\nPhone: ${formData.phone}\nComments: ${formData.comments}`
     );
+
+    // Clear form and show success message
     setFormData({ name: "", address: "", phone: "", comments: "" });
+    setError("");
+    setSubmitted(true);
   };
 
   return (
-    <div className="container mt-5 p-4 bg-dark-subtle rounded shadow">
+    <div className="container mt-5 p-4 bg-light rounded shadow">
       <h2 className="text-center text-black mb-4">Confirmation Form</h2>
+
+      {error && (
+        <div className="alert alert-danger text-center" role="alert">
+          {error}
+        </div>
+      )}
+
+      {submitted && (
+        <div className="alert alert-success text-center" role="alert">
+          Form successfully submitted!
+        </div>
+      )}
+
       <div className="form-group mb-3">
         <label htmlFor="name" className="form-label">
           Your Name
@@ -35,6 +80,7 @@ const Confirme = () => {
           placeholder="Enter Your Name"
           value={formData.name}
           onChange={handleChange}
+          aria-label="Enter your name"
           required
         />
       </div>
@@ -49,6 +95,7 @@ const Confirme = () => {
           placeholder="Enter Your Address"
           value={formData.address}
           onChange={handleChange}
+          aria-label="Enter your address"
           required
         />
       </div>
@@ -57,13 +104,14 @@ const Confirme = () => {
           Phone Number
         </label>
         <input
-          type="number"
+          type="text"
           id="phone"
           className="form-control"
-          placeholder="Enter Your Phone Number"
+          placeholder="Enter Your Phone Number (9 digits)"
           value={formData.phone}
           onChange={handleChange}
-          maxLength="9"
+          aria-label="Enter your phone number"
+          maxLength={9}
           required
         />
       </div>
@@ -78,10 +126,15 @@ const Confirme = () => {
           placeholder="Enter your comments here..."
           value={formData.comments}
           onChange={handleChange}
+          aria-label="Enter additional comments"
         ></textarea>
       </div>
       <div className="text-center">
-        <button className="btn btn-danger px-4 py-2" onClick={handleConfirm}>
+        <button
+          className="btn btn-danger px-4 py-2"
+          onClick={handleConfirm}
+          aria-label="Confirm form submission"
+        >
           Confirm
         </button>
       </div>
