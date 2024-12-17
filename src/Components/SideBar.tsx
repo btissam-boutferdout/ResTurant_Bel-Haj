@@ -1,5 +1,7 @@
 //
 import { Link } from "react-router-dom";
+import burgerImage from "../assets/burger1.png";
+
 const SideBar = () => {
   return (
     <>
@@ -24,8 +26,8 @@ const SideBar = () => {
           </div>
           <div className="d-flex justify-content-center">
             <img
-              src="src/assets/burger1.png"
-              alt="Burger"
+              src={burgerImage}
+              alt="burger"
               className="w-75 align-items-end"
             />
           </div>

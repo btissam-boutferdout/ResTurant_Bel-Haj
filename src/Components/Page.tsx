@@ -1,3 +1,6 @@
+import BrochetteImage from "../assets/brochette.webp";
+import SpagitiImage from "../assets/sbagette.jpeg";
+import LasagneImage from "../assets/lasagne.jpg";
 const Page = () => {
   return (
     <>
@@ -15,11 +18,7 @@ const Page = () => {
           <div className="row">
             <div className="col-12 col-md-6 col-lg-4 mb-4">
               <div className="card h-100">
-                <img
-                  src="src/assets/brochette.webp"
-                  className="card-img-top"
-                  alt="..."
-                />
+                <img src={BrochetteImage} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Brochette Viande </h5>
                   <p className="card-text">
@@ -35,11 +34,7 @@ const Page = () => {
 
             <div className="col-12 col-md-6 col-lg-4 mb-4">
               <div className="card h-100">
-                <img
-                  src="src/assets/sbagette.jpeg"
-                  className="card-img-top"
-                  alt="..."
-                />
+                <img src={SpagitiImage} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Spaghetti Sea Food</h5>
                   <p className="card-text">
@@ -55,11 +50,7 @@ const Page = () => {
 
             <div className="col-12 col-md-6 col-lg-4 mb-4">
               <div className="card h-100">
-                <img
-                  src="src/assets/lasagne.jpg"
-                  className="card-img-top"
-                  alt="..."
-                />
+                <img src={LasagneImage} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Lasagne</h5>
                   <p className="card-text">

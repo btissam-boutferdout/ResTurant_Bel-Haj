@@ -14,6 +14,7 @@ interface CartItem {
 // Define MenuSectionProps interface for typing the props
 interface MenuSectionProps {
   title: string;
+
   menuItem: CartItem[];
 }
 

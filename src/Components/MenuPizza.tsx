@@ -5,8 +5,9 @@ const MenuPizza = () => {
   // Transform MenuData.Brouchette to conform to CartItem type
   const menuItemsWithQuantity = MenuData.Pizza.map((item) => ({
     ...item,
-    id: String(item.id), // Convert `id` to string
-    quantity: 1, // Add a default quantity
+    id: String(item.id),
+    quantity: 1, // Convert `id` to string
+    // Add a default quantity
   }));
 
   return <MenuSection title="Pizza" menuItem={menuItemsWithQuantity} />;

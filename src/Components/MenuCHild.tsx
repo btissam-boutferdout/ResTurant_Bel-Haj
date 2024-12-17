@@ -1,4 +1,15 @@
 import { Link } from "react-router-dom";
+import PizzaImage from "../assets/pizzas.jpg";
+import SaladeImage from "../assets/salades.jpeg";
+import PaniniImage from "../assets/paninis.jpg";
+import CosamiaImage from "../assets/cosamia.webp";
+import SandwichImage from "../assets/sandwish.jpg";
+import BrochetteImage from "../assets/brochette.webp";
+import BurgerImage from "../assets/burger.jpg";
+import TacosImage from "../assets/tacos.jpg";
+import LasagneImage from "../assets/lasagne.jpg";
+import SabgittiImage from "../assets/sbaghette.jpg";
+import JusImage from "../assets/jus.jpg";
 
 const MenuCHild = () => {
   return (
@@ -8,12 +19,11 @@ const MenuCHild = () => {
           <h1 className="display-4 fw-bold">Welcome to Our Menu</h1>
           <p className="text-muted">Delicious food, made just for you!</p>
         </main>
-
         <section className="menu-section container py-4">
           <div className="row align-items-center bg-black text-light rounded shadow p-4">
             <div className="col-md-4 text-center">
               <img
-                src="src/assets/pizzas.jpg"
+                src={PizzaImage}
                 alt="Delicious Pizzas"
                 className="img-fluid rounded"
                 style={{ maxHeight: "200px", objectFit: "cover" }}
@@ -38,7 +48,7 @@ const MenuCHild = () => {
           <div className="row align-items-center bg-black rounded shadow p-4">
             <div className="col-md-4 text-center">
               <img
-                src="src/assets/salades.jpeg"
+                src={SaladeImage}
                 alt="Delicious Salades"
                 className="img-fluid rounded"
                 style={{ maxHeight: "200px", objectFit: "cover" }}
@@ -63,7 +73,7 @@ const MenuCHild = () => {
           <div className="row align-items-center bg-black text-light rounded shadow p-4">
             <div className="col-md-4 text-center">
               <img
-                src="src/assets/paninis.jpg"
+                src={PaniniImage}
                 alt="Delicious Paninis"
                 className="img-fluid rounded"
                 style={{ maxHeight: "200px", objectFit: "cover" }}
@@ -88,7 +98,7 @@ const MenuCHild = () => {
           <div className="row align-items-center bg-black rounded shadow p-4">
             <div className="col-md-4 text-center">
               <img
-                src="src/assets/cosamia.webp"
+                src={CosamiaImage}
                 alt="Delicious "
                 className="img-fluid rounded"
                 style={{ maxHeight: "200px", objectFit: "cover" }}
@@ -113,7 +123,7 @@ const MenuCHild = () => {
           <div className="row align-items-center bg-black text-light rounded shadow p-4">
             <div className="col-md-4 text-center">
               <img
-                src="src/assets/sandwish.jpg"
+                src={SandwichImage}
                 alt="Delicious Paninis"
                 className="img-fluid rounded"
                 style={{ maxHeight: "200px", objectFit: "cover" }}
@@ -134,12 +144,11 @@ const MenuCHild = () => {
             </div>
           </div>
         </section>
-
         <section className="menu-section container py-4">
           <div className="row align-items-center bg-black text-light rounded shadow p-4">
             <div className="col-md-4 text-center">
               <img
-                src="src/assets/brochette.webp"
+                src={BrochetteImage}
                 alt="Delicious Pizzas"
                 className="img-fluid rounded"
                 style={{ maxHeight: "200px", objectFit: "cover" }}
@@ -160,12 +169,11 @@ const MenuCHild = () => {
             </div>
           </div>
         </section>
-
         <section className="menu-section container py-4">
           <div className="row align-items-center bg-black text-light rounded shadow p-4">
             <div className="col-md-4 text-center">
               <img
-                src="src/assets/burger.jpg"
+                src={BurgerImage}
                 alt="Delicious Paninis"
                 className="img-fluid rounded"
                 style={{ maxHeight: "200px", objectFit: "cover" }}
@@ -190,7 +198,7 @@ const MenuCHild = () => {
           <div className="row align-items-center bg-black text-light rounded shadow p-4">
             <div className="col-md-4 text-center">
               <img
-                src="src/assets/tacos.jpg"
+                src={TacosImage}
                 alt="Delicious Paninis"
                 className="img-fluid rounded"
                 style={{ maxHeight: "200px", objectFit: "cover" }}
@@ -215,7 +223,7 @@ const MenuCHild = () => {
           <div className="row align-items-center bg-black text-light rounded shadow p-4">
             <div className="col-md-4 text-center">
               <img
-                src="src/assets/lasagne.jpg"
+                src={LasagneImage}
                 alt="Delicious Paninis"
                 className="img-fluid rounded"
                 style={{ maxHeight: "200px", objectFit: "cover" }}
@@ -240,7 +248,7 @@ const MenuCHild = () => {
           <div className="row align-items-center bg-black text-light rounded shadow p-4">
             <div className="col-md-4 text-center">
               <img
-                src="src/assets/sbaghette.jpg"
+                src={SabgittiImage}
                 alt="Delicious Paninis"
                 className="img-fluid rounded"
                 style={{ maxHeight: "200px", objectFit: "cover" }}
@@ -265,7 +273,7 @@ const MenuCHild = () => {
           <div className="row align-items-center bg-black text-light rounded shadow p-4">
             <div className="col-md-4 text-center">
               <img
-                src="src/assets/jus.jpg"
+                src={JusImage}
                 alt="Delicious Paninis"
                 className="img-fluid rounded"
                 style={{ maxHeight: "200px", objectFit: "cover" }}

@@ -1,4 +1,6 @@
-//
+import TacosImage from "../assets/tacos.jpg";
+import CosamiaImage from "../assets/cosamia.jpg";
+import PizzaImage from "../assets/pizaa.webp";
 
 const Grid = () => {
   return (
@@ -12,27 +14,19 @@ const Grid = () => {
             <div className="container text-center">
               <div className="row">
                 <div className="col-12 col-md-4 mb-3">
-                  <img
-                    src="src/assets/tacos.jpg"
-                    alt=""
-                    className="w-75 h-75 rounded"
-                  />
+                  <img src={TacosImage} alt="" className="w-75 h-75 rounded" />
                   <h1 className="">Tacos</h1>
                 </div>
                 <div className="col-12 col-md-4 mb-3">
                   <img
-                    src="src/assets/cosamia.jpg"
+                    src={CosamiaImage}
                     alt=""
                     className="w-75 h-75  rounded"
                   />
                   <h1>Cosamia</h1>
                 </div>
                 <div className="col-12 col-md-4 mb-3">
-                  <img
-                    src="src/assets/pizaa.webp"
-                    alt=""
-                    className="w-75 h-75 rounded"
-                  />
+                  <img src={PizzaImage} alt="" className="w-75 h-75 rounded" />
                   <h1>Pizza</h1>
                 </div>
               </div>
